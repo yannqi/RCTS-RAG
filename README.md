@@ -7,7 +7,7 @@ This repository provides the PyTorch implementation for the paper "Re-ranking Re
 
 ## 🔥What's New
 
-- (2025. 5.1) Our paper~(RCTS) is accepted as ICML Spotlight Paper! 😮 (Happy Labor Day! 👷👷‍♀️)
+- (2025. 5.1) Our paper (RCTS) is accepted as ICML Spotlight Paper! 😮 (Happy Labor Day! 👷👷‍♀️)
 
 ## 🪵 TODO List
 
