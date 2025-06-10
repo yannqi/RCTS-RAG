@@ -26,5 +26,13 @@ TODO
 ## 🤝 Citing RCTS
 
 ```
-TODO
+@misc{yang2025rerankingreasoningcontexttree,
+      title={Re-ranking Reasoning Context with Tree Search Makes Large Vision-Language Models Stronger}, 
+      author={Qi Yang and Chenghao Zhang and Lubin Fan and Kun Ding and Jieping Ye and Shiming Xiang},
+      year={2025},
+      eprint={2506.07785},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2506.07785}, 
+}
 ```
