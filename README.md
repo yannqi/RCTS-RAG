@@ -23,7 +23,7 @@ This repository provides the official PyTorch implementation for **RCTS-RAG**, a
 - **(2024.8.31)** 🚀 Released the complete implementation code
 
 ## 📖 Abstract
-
+![1756659815270](image/README/1756659815270.png)
 RCTS-RAG introduces a novel framework that combines Retrieval-Augmented Generation (RAG) with Monte Carlo Tree Search to improve the reasoning capabilities of Large Vision-Language Models. Our approach:
 
 - 🎯 **Re-ranks reasoning contexts** using MCTS to find optimal reasoning paths
@@ -32,6 +32,10 @@ RCTS-RAG introduces a novel framework that combines Retrieval-Augmented Generati
 - 🔄 **Supports multiple query modes** including hybrid, text-only, and random retrieval
 
 ## 🏗️ Architecture
+
+![1756659798225](image/README/1756659798225.png)
+
+![1756659876968](image/README/1756659876968.png)
 
 Our RCTS-RAG framework consists of three main components:
 
@@ -245,7 +249,7 @@ bash scripts/evaluate/eval_all_scienceqa.sh
 
 Our RCTS-RAG achieves significant improvements across multiple benchmarks.
 
-![1756659507974](image/README/1756659507974.png)
+![1756659766699](image/README/1756659766699.png)
 
 *Results may vary based on model configurations and computational resources.*
 
