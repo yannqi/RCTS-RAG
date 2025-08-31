@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python3 tools/Index_construct.py --config configs/index_save/ScienceQA_Hybrid_PreFLMR.yaml

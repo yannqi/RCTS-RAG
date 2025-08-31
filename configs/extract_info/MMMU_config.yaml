@@ -1,0 +1,27 @@
+# Base Config
+PROJECT_NAME: Draw_MMMU_QwenVL2_7B_Self_Cot_validation_2048
+INFO_EXTRACT_TYPE: Self_CoT
+CoT_LOOP_TIMES: 10
+Reward_LOOP_TIMES: 10
+## Dataset Config
+DATASET_NAME: MMMU  # dataset name, e.g., ok, aok
+DATASET_PATH:
+    DATA_ROOT: ./dataspace/MMMU/
+
+## API Config
+LLM_MODEL_MAX_ASYNC: 20
+
+api_extra_body:
+    temperature: 0.8
+    top_p: 0.9
+    repetition_penalty: 1.05
+    max_tokens: 2048
+
+
+# Other Config
+DATASET_PATH_CONFIG: configs/dataset_path.yaml
+TASK_CONFIG: configs/task_config.yaml
+
+# Logger Config
+WITH_TIME: False
+LOG_DIR_ORI: ./logs/  

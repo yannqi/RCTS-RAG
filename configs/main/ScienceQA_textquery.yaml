@@ -1,0 +1,37 @@
+# Base Config
+PROJECT_NAME: Temp_ScienceQA_baseline_textembedding_QwenVL2_Baseline_wtextRAG_Top1_wextra_body_wnewfaiss_wnewprompt_v0.1_wimg_bug_fix_wCoT
+USE_RAG: True
+## Dataset Config
+DATASET_NAME: ScienceQA  # dataset name, e.g., ok, aok
+DATASET_PATH:
+    DATA_ROOT: ./dataspace/ScienceQA_DATA
+## API Model Config
+## CoT Path
+COT_CSV_PATH: ./logs/ScienceQA_Self_Cot_QwenVL2_get_CoT_steps_system_VQA_v0_4_refine_v0_2_with_judge_v2_trainval_wimgbugfix/outputs/trainval_pred_CoT.csv
+
+
+EMBEDDING_MODEL:
+    EMBEDDING_NAME: all-MiniLM-L6-v2
+    MODEL_PATH: ./cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/ea78891063587eb050ed4166b20062eaf978037c
+ENABLE_LLM_CACHE: True
+LLM_MODEL_MAX_ASYNC: 50
+api_extra_body:
+    temperature: 0.1
+    top_p: 0.001
+    repetition_penalty: 1.05
+    max_tokens: 512
+
+## Faiss Config
+TOP_K: 1
+INDEX_TYPE: 'cosine'
+QUERY_MODE: naive_text # random naive_text
+FAISS_DIR: ./logs/ScienceQA_Text_Faiss_MiniLM-L6-v2_woCoT_wnewprompt_wimgpath_bug_fix
+
+# Other Config
+DATASET_PATH_CONFIG: configs/dataset_path.yaml
+TASK_CONFIG: configs/task_config.yaml
+
+# Logger Config
+WITH_TIME: False
+LOG_DIR_ORI: ./logs/
+SAVE_EMBEDDING_PATH: ./outputs/embedding_for_infer

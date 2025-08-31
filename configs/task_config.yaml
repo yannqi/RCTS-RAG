@@ -1,0 +1,43 @@
+TASK_TO_SPLIT:
+  ok:
+    pretrain:
+      train_split:
+        - v2train
+        - v2valvg_no_ok
+    finetune:
+      train_split:
+        - oktrain
+      eval_split:
+        - oktest
+  aok_val:
+    pretrain:
+      train_split:
+        - v2train
+    finetune:
+      train_split:
+        - aoktrain
+      eval_split:
+        - aokval
+  aok_test:
+    pretrain:
+      train_split:
+        - v2train
+        - v2val
+        - vg
+    finetune:
+      train_split:
+        - aoktrain
+        - aokval
+      eval_split:
+        - aoktest
+
+TASK_TO_IMG_MAPPING:
+  v2train: train2014
+  v2val: val2014
+  v2valvg_no_ok: val2014
+  vg: val2014
+  oktrain: train2014
+  oktest: val2014
+  aoktrain: train2017
+  aokval: val2017
+  aoktest: test2017

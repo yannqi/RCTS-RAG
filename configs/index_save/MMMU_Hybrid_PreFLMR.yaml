@@ -1,0 +1,24 @@
+# Base Config
+PROJECT_NAME: Index_MMMU_Hybrid_Pre_Flmr_Validation
+## Dataset Config
+DATASET_NAME: MMMU  # dataset name, e.g., ok, aok
+DATASET_PATH:
+    DATA_ROOT: ./dataspace/MMMU/
+INDEX_TYPE: pre_flmr
+
+## EMBEDDING MODEL
+INDEX_MODEL:
+    COLBELT_MODEL:
+        MODEL_NAME: PreFLMR_ViT-L
+        MODEL_PATH: ./cache/huggingface/hub/PreFLMR_ViT-L
+        VIT_PATH: ./cache/huggingface/hub/clip-vit-large-patch14
+    EMBEDDING_MODEL:
+        MODEL_NAME: all-MiniLM-L6-v2
+        MODEL_PATH: ./cache/huggingface/hub/all-MiniLM-L6-v2/
+# Other Config
+DATASET_PATH_CONFIG: configs/dataset_path.yaml
+TASK_CONFIG: configs/task_config.yaml
+
+# Logger Config
+WITH_TIME: False
+LOG_DIR_ORI: ./logs/

@@ -1,0 +1,47 @@
+# config.yaml
+
+log_root: outputs/logs/
+ckpt_root: outputs/ckpts/
+results_root: outputs/results/
+dataset_root: ./dataspace/
+assets_root: assets/
+
+IMAGE_DIR:
+  train2014: "${dataset_root}/COCO/COCO_2014/raw/train2014/"
+  val2014: "${dataset_root}/COCO/COCO_2014/raw/val2014/"
+  train2017: "${dataset_root}/COCO/COCO_2017/train2017/"
+  val2017: "${dataset_root}/COCO/COCO_2017/val2017/"
+  test2017: "${dataset_root}/COCO/COCO_2017/test2017/"
+
+FEATS_DIR:
+  train2014: "${dataset_root}/COCO/COCO_2014/coco2014_feats/train2014/"
+  val2014: "${dataset_root}/COCO/COCO_2014/coco2014_feats/val2014/"
+  train2017: "${dataset_root}/COCO/COCO_2017/coco2017_feats/train2017/"
+  val2017: "${dataset_root}/COCO/COCO_2017/coco2017_feats/val2017/"
+  test2017: "${dataset_root}/COCO/COCO_2017/coco2017_feats/test2017/"
+
+question_paths:
+  v2train: "${dataset_root}/vqav2/v2_OpenEnded_mscoco_train2014_questions.json"
+  v2val: "${dataset_root}/vqav2/v2_OpenEnded_mscoco_val2014_questions.json"
+  vg: "${dataset_root}/vqav2/vg_questions.json"
+  v2valvg_no_ok: "${dataset_root}/vqav2/v2valvg_no_ok_questions.json"
+  oktrain: "${dataset_root}/okvqa/OpenEnded_mscoco_train2014_questions.json"
+  oktest: "${dataset_root}/okvqa/OpenEnded_mscoco_val2014_questions.json"
+  aoktrain: "${dataset_root}/aokvqa/aokvqa_v1p0_train.json"
+  aokval: "${dataset_root}/aokvqa/aokvqa_v1p0_val.json"
+  aoktest: "${dataset_root}/aokvqa/aokvqa_v1p0_test.json"
+
+answer_paths:
+  v2train: "${dataset_root}/vqav2/v2_mscoco_train2014_annotations.json"
+  v2val: "${dataset_root}/vqav2/v2_mscoco_val2014_annotations.json"
+  vg: "${dataset_root}/vqav2/vg_annotations.json"
+  v2valvg_no_ok: "${dataset_root}/vqav2/v2valvg_no_ok_annotations.json"
+  oktrain: "${dataset_root}/okvqa/mscoco_train2014_annotations.json"
+  oktest: "${dataset_root}/okvqa/mscoco_val2014_annotations.json"
+  aoktrain: "${dataset_root}/aokvqa/aokvqa_v1p0_train.json"
+  aokval: "${dataset_root}/aokvqa/aokvqa_v1p0_val.json"
+
+answer_dict_paths:
+  v2: "${assets_root}/answer_dict_vqav2.json"
+  ok: "${assets_root}/answer_dict_okvqa.json"
+  aok: "${assets_root}/answer_dict_aokvqa.json"

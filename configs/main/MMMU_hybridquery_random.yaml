@@ -1,0 +1,41 @@
+# Base Config
+PROJECT_NAME: MMMU_baseline_wpreFLMR_QwenVL2_whybridRAG_woCoT_random3_wextra_body_wnewprompt_2048_v2_Dev
+USE_RAG: True
+## Dataset Config
+DATASET_NAME: MMMU # dataset name, e.g., ok, aok
+DATASET_PATH:
+    DATA_ROOT: ./dataspace/MMMU/
+## API Model Config
+## CoT Path
+# COT_CSV_PATH: ./logs/MMMU_QwenVL2_7B_Self_Cot_validation_2048/outputs/validation_pred_CoT.csv
+COT_CSV_PATH: null
+ENABLE_LLM_CACHE: False
+LLM_MODEL_MAX_ASYNC: 20
+api_extra_body:
+    temperature: 0.1
+    top_p: 0.001
+    repetition_penalty: 1.05
+    max_tokens: 2048
+
+## Faiss Config
+INDEX_MODEL:
+    COLBELT_MODEL:
+        MODEL_NAME: PreFLMR_ViT-L
+        MODEL_PATH: ./cache/huggingface/hub/PreFLMR_ViT-L
+        VIT_PATH: ./cache/huggingface/hub/clip-vit-large-patch14
+    EMBEDDING_MODEL:
+        MODEL_NAME: all-MiniLM-L6-v2
+        MODEL_PATH: ./cache/huggingface/hub/all-MiniLM-L6-v2/
+
+TOP_K: 3
+INDEX_TYPE: faiss_and_pre_flmr
+QUERY_MODE: random # random \naive_text\ hybrid
+FAISS_DIR: ./logs/Index_MMMU_Hybrid_Pre_Flmr_Validation/
+# Other Config
+DATASET_PATH_CONFIG: configs/dataset_path.yaml
+TASK_CONFIG: configs/task_config.yaml
+
+# Logger Config
+WITH_TIME: False
+LOG_DIR_ORI: ./logs/
+SAVE_EMBEDDING_PATH: ./outputs/embedding_for_infer_hybrid_query/

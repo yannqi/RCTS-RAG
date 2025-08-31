@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2,3 python3 tools/Index_construct.py --config configs/index_save/VizWiz_Hybrid_PreFLMR.yaml

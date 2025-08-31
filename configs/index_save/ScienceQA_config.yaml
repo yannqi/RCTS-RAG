@@ -1,0 +1,21 @@
+# Base Config
+PROJECT_NAME: ScienceQA_Text_Faiss_MiniLM-L6-v2_woCoT_wnewprompt_wimgpath_bug_fix
+## Dataset Config
+DATASET_NAME: ScienceQA  # dataset name, e.g., ok, aok
+DATASET_PATH:
+    DATA_ROOT: ./dataspace/ScienceQA_DATA
+
+
+## EMBEDDING MODEL
+EMBEDDING_MODEL:
+    EMBEDDING_NAME: all-MiniLM-L6-v2
+    MODEL_PATH: ./cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/ea78891063587eb050ed4166b20062eaf978037c
+
+
+# Other Config
+DATASET_PATH_CONFIG: configs/dataset_path.yaml
+TASK_CONFIG: configs/task_config.yaml
+
+# Logger Config
+WITH_TIME: False
+LOG_DIR_ORI: ./logs/

@@ -1,0 +1,9 @@
+# Base Config
+DATASET: ok  # dataset name, e.g., ok, aok
+CLIP_NAME: RN50x64
+MODEL_PATH: './cache/pretrained/clip/RN50x64.pt' # clip model name or local model checkpoint path, e.b., RN50x64
+IMG_RESOLUTION: 512
+
+# Other Config
+DATASET_PATH_CONFIG: configs/dataset_path.yaml
+TASK_CONFIG: configs/task_config.yaml

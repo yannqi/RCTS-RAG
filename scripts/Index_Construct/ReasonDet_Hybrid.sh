@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1 python3 tools/Index_construct.py --config configs/index_save/MathV_Hybrid_PreFLMR.yaml
