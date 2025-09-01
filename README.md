@@ -19,8 +19,8 @@ This repository provides the official PyTorch implementation for **RCTS-RAG**, a
 ## 🔥 What's New
 
 - **(2025.5.1)** 🎉 Our paper (RCTS) is accepted as **ICML 2025 Spotlight Paper**!
-- **(2024.5.6)** 📄 Paper released on arXiv
-- **(2024.8.31)** 🚀 Released the complete implementation code
+- **(2025.5.6)** 📄 Paper released on arXiv
+- **(2025.8.31)** 🚀 Released the complete implementation code
 
 ## 📖 Abstract
 ![1756659815270](image/README/1756659815270.png)
